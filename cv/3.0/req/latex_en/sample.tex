@@ -1,0 +1,316 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.4, 13 Nov 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[11pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{HAKAN TEK}
+\tagline{Industrial Engineer | MSc Student in Production Engineering}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{Photo, qr_de}
+%\photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{hakan.tek@stud.th-owl.de}
+  \phone{+49 1573 5687740}
+  \mailaddress{Universitätsstraße 7, 33615 Bielefeld}
+  \linkedin{hakanttek}
+  \github{hakanttek}
+  
+  %\hspace{10mm}
+  
+\smallskip{An engineer who likes to develop algorithms and software. Developed projects with teammates in the fields of operation research and deep learning, resulting in a TUBITAK award. A paragliding pilot who likes to fly with the student club. A Lieferando biker who loves mountain biking.}
+  
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+\makecvheader
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.5}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+
+\cvsection{WORK EXPERIENCE}
+
+%Job 1 - 2
+\large\makebox[0.6\linewidth][l]{\color{emphasis}R\&D Engineer}
+\small\makebox[0.4\linewidth][l]{\faCalendar~Jan -- Sept 2020}
+  
+\par
+  
+\cvexperience{Production Engineer}{Akar Textile}{Apr -- Dec 2019}{Izmir, Turkey}{}{}
+• Developed operator performance and production monitoring system in Java.\par\smallskip
+• Formulated the standard times in Cutting Department and determinate the operators' performances.
+
+%\begin{itemize}
+%\item Entwicklung einer Open-Source-ERP-Software für die %Produktionsplanung und -steuerung.
+
+%\item Formulierte die Standardzeiten in der Schnittabteilung und %bestimmte die Leistungen der Bediener. 
+%\end{itemize}
+
+\divider
+%Job 3
+\cvexperience{Assistant Teacher (Part time)}{Izmir University of Economics}{Nov 2018 -- Feb 2019}{Izmir, Turkey}
+Provided training for Excel to the students and the beginner staffs in Teaching and Learning Center. Developed an Excel macro for item analysis.
+\par
+
+\cvsection{Internship}
+
+%Internship 1
+\cvexperience{Project Engineering}{Philip Morris International}{Nov 2018 -- Apr 2019}{Izmir, Turkey}
+Developed the number of defective products prediction model using machine learning algorithms.
+
+\divider
+
+%Internship 2
+\cvexperience{Production Systems Engr.}{Akar Textile}{Aug – Sept 2018}{Izmir, Turkey}
+Wrote a macro which optimally assigning the product models to the lines using Excel, VBA and Solver.
+
+\divider
+
+%Internship 3
+\cvexperience{Production Engineer}{Hugo Boss}{Jun – Aug 2018}{Izmir, Turkey}
+Got training about production engineering and personal growth. Wrote a macro for optimally machine layout planning using Excel, VBA and solver.
+
+\divider
+
+%Internship 4
+\cvexperience{Production Control Engineer}{Delphi Technologies}{Jul – Sept 2017}{Izmir, Turkey}
+Did an internship in the tugger system project.
+
+
+\cvsection{VOLUNTEERING EXPERIENCE}
+
+%voluntary 1
+\cvexperience{Buddy Student}{TH-OWL}{Sep 2021 – Present}{Lemgo, Germany}
+Helping incoming students adapt to Germany.
+
+\divider
+
+%voluntary 2
+\cvexperience{Chairperson}{IUE Aviation Club}{Oct 2017 -- Oct 2018}{Izmir, Turkey}
+Launch the autonomous uav project. Paragliding trainings were organized.
+
+\divider
+
+%voluntary 3
+\cvexperience{Fundraiser }{UNICEF}{May – Sep 2016}{Izmir, Turkey}
+Persuaded the people into being a supporter.
+
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{EDUCATION}
+
+\cvuniversity{M.Sc.\ in Production Engineering and Man.}{Technische Hochschule Ostwestfalen-Lippe}
+{University of Trieste (Double degree)}{Oct 2020 – Present}{Lemgo, Germany}
+
+  {\small\makebox[0.5\linewidth][l]{}}%
+  {\small\makebox[0.5\linewidth][l]{\faMapMarker~Pordenone, Italy}}\par
+
+\divider
+
+\cvuniversity{B.Sc.\ in Industrial Engineering}{Izmir University of Economics}{}{Sep 2014 -- June 2019}{Izmir, Turkey}
+
+
+
+\cvsection{SKILLS}
+
+\cvskills{\faIndustry}{}\large\textbf{Advanced}
+\small
+\cvtag{Cplex}
+\cvtag{Excel \& VBA}
+\cvtag{EDS}
+\smallskip
+\large\textbf{\hspace{0.75cm} Intermediate}
+\small
+\cvtag{SAP S/4 HANA}
+\cvtag{Teamcenter}
+
+\divider
+
+\cvskills{\faCode}{}\large\textbf{Advanced}
+\small
+\cvtag{Java}
+\cvtag{C\#}
+\cvtag{Python}
+
+\large\textbf{\hspace{0.85cm}Intermediate}
+\small
+\cvtag{SQL}
+\cvtag{HTML \& CSS}
+\cvtag{LaTeX}
+
+\divider
+
+\cvskills{\faLanguage}{}\large\textbf{Language}
+\small
+\cvtag{German | Intermediate}\\
+\cvtag{Englisch | Advanced}
+\cvtag{Italian | Beginner}
+\cvtag{Turkish | Native}
+
+
+\cvsection{ACHIEVEMENT}
+
+\cvachievement{Encouragement Award}{Akar Textile  R\&D Center}{Sep 2020}
+
+\divider
+
+\cvachievement{Winner}{TUBITAK 2242 - aegean region}{Jun 2019}
+
+\divider
+
+\cvachievement{Paper Acceptance}{39. YAEM}{Jun 2019}
+
+
+\cvsection{CERTIFICATES}
+
+\large\textbf{Elginkan Foundation}
+\small
+\cvtag{OOP - C\# | 80 hr}\\
+\cvtag{Excel \& VBA | 56 hr}
+\cvtag{Kaizen | 4 hr}
+\cvtag{5S | 4 hr}
+\cvtag{Benchmarking | 4 hr}
+\cvtag{6 Sigma | 4 hr}
+
+\divider
+
+\large\textbf{University Events}
+\small
+\cvtag{39th YAEM}\\
+\cvtag{Teknofest 2019}
+\cvtag{12th MÜYAK}
+\cvtag{IndEx'18}\\
+\cvtag{24th ITU EMÖS}
+\cvtag{Zirve’16}
+
+
+\cvsection{HOBBYS}
+
+\cvtag{Mountain biking}
+\cvtag{Paragliding}
+\cvtag{Swimming}\\
+\cvtag{Escape Game}
+\cvtag{Crime Fiction}
+\cvtag{Science Fiction}
+
+
+
+\smallskip
+
+
+
+
+\end{paracol}
+
+
+\end{document}
