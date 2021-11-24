@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=ISO-8859-1;LANGUAGE=de-de:Groﬂ;Sven
+FN;CHARSET=ISO-8859-1;LANGUAGE=de-de:Prof. Dr. Groﬂ Sven
+ORG;CHARSET=ISO-8859-1;LANGUAGE=de-de:Hochschule Harz
+URL:http://www.hs-harz.de/sgross
+EMAIL;TYPE=INTERNET:sgross@hs-harz.de
+TEL;TYPE=voice,work,pref:+49 3943 659 279
+TEL;TYPE=fax,work,pref:
+ADR;CHARSET=ISO-8859-1;LANGUAGE=de-de;TYPE=intl,work,postal,parcel:;;Friedrichstrasse;Wernigerode;;38855;Germany
+END:VCARD
+
+
+
+
+
